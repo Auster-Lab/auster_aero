@@ -8,9 +8,9 @@ import numpy.typing as npt
 @dataclass
 class Airfoil:
     name: str
-    upper_points: npt.NDArray[np.floating] | list[float]
-    lower_points: npt.NDArray[np.floating] | list[float]
-    points: npt.NDArray[np.floating] | list[float]
+    upper_points: npt.NDArray[np.floating]
+    lower_points: npt.NDArray[np.floating]
+    points: npt.NDArray[np.floating]
 
 
 def read_selig_airfoil_file(filepath: Path | str) -> Airfoil:
