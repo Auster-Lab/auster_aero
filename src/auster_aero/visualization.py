@@ -6,6 +6,18 @@ from auster_aero.geometry import Airfoil
 
 
 def plot_airfoil(airfoil: Airfoil, height_mm: float, width_mm: float, dpi: int = 300):
+    """
+    Plots the airfoil shape with specified dimensions and resolution.
+
+    Args:
+        airfoil (Airfoil): The airfoil object containing the points to plot.
+        height_mm (float): The height of the plot in millimeters.
+        width_mm (float): The width of the plot in millimeters.
+        dpi (int, optional): The resolution of the plot in dots per inch. Default is 300.
+
+    Returns:
+        tuple: A tuple containing the figure and axes objects of the plot.
+    """
     height_in = quantity(height_mm, "millimeter").to("inch")
     width_in = quantity(width_mm, "millimeter").to("inch")
 
